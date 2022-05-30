@@ -10,11 +10,12 @@
 </head>
 
 <body>
-    <div id="app">
+    <!-- template 코드 -->
+    <div id="app" class="demo">
         <span :name="message">{{message}}</span>
     </div>
     <script>
-        const main = {                                      // letteral 객체
+        const main = {                              // letteral 객체
             data() {
                 return { message: '안녕 나는 KBJ' }
             },
