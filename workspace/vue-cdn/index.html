@@ -6,16 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://unpkg.con/vue@next"></script>
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
-    <div id="app" class="demo">
+    <div id="app">
         <span :name="message">{{message}}</span>
     </div>
     <script>
         const main = {                                      // letteral 객체
-            data() {return { message: '안녕 나는 KBJ' }},
+            data() {
+                return { message: '안녕 나는 KBJ' }
+            },
             created() {
                 console.log(this.message);
                 console.log(this.$el);
@@ -25,7 +27,7 @@
                 console.log(this.$el);
             }
         }
-        Vue.createdApp(main).mounted('#app')
+        Vue.createApp(main).mount('#app')
     </script>
 </body>
 
