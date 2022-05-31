@@ -1,6 +1,6 @@
 <template>
   <div :id="dynamicId">Hello</div>
-  <img :src="url + `100x100`" alt="" />
+  <img :src="url + '100x100'" alt="" />
   <div :class="[classA, classB]"></div>
   <div :style="[styleA, styleB]"></div>
   <div :="{id:box,'data-url':url}"></div>
