@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <Exercise msg="Welcome to Your Vue.js App"/>
+  <Exercise />
 </template>
 
 <script>
@@ -28,5 +28,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  list-style-type : none;
 }
 </style>
