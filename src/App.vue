@@ -1,15 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Vue3 Options API</h1>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  // data(){
+  //   return {result: 0}
+  // },
+  data : () => ({result:0}),
+  methods : {
+    increateNum(){
+      this.result++
+    }
   }
 }
 </script>
