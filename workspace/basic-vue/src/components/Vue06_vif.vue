@@ -1,7 +1,9 @@
 <template>
   <h1>v-if</h1>
   <div v-if="Math.floor(Math.random() * 45) + 1 > 23">번호가 큽니다</div>
-  <div v-else>번호가 작습니다</div>
+  <div v-else>번호가 작습니다</div><br>
+
+  <div>당신의 학점은</div>
   <div v-if="score >= 90">A</div>
   <div v-else-if="score >= 80">B</div>
   <div v-else-if="score >= 70">C</div>
