@@ -8,7 +8,8 @@
 // import Exercise from './components/Vue02_declaritive_rendering.vuevue'
 // import Exercise from './components/Vue03_vbind.vue'
 // import Exercise from './components/Vue04_vonce.vue'
-import Exercise from './components/Vue05_vshow.vue'
+// import Exercise from './components/Vue05_vshow.vue'
+import Exercise from './components/Vue06_vif.vue'
 
 export default {
   name: 'App',
