@@ -6,7 +6,8 @@
 <script>
 // import Exercise from './components/Vue01_data.vue'
 // import Exercise from './components/Vue02_declaritive_rendering.vuevue'
-import Exercise from './components/Vue03_vbind.vue'
+// import Exercise from './components/Vue03_vbind.vue'
+import Exercise from './components/Vue04_vonce.vue'
 
 export default {
   name: 'App',
