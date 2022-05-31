@@ -1,16 +1,14 @@
 <template>
   <h1>v-once</h1>
-  <span v-once v-text="'다시는 변경되지 않습니다' + msg"></span><br />
-  <span>변경이 잘 됩니다.{{msg}}</span><br>
+  <span v-once v-text="'안 바뀌지롱' + msg"></span><br />
+  <span>아니 난 바뀌는데{{msg}}</span><br>
   <input type="text" v-model="msg">
 </template>
 
 <script>
-
-const data = { msg: "v-once 이기 때문이다" };
 export default {
   data() {
-    return data;
+    return {"msg":" v-once이거든" };
   }, 
 };
 </script>
