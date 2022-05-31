@@ -15,7 +15,7 @@ export default {
       classA: "rect",
       classB: "fill",
       styleA: "background:olive; border-radius:50px;",
-      styleB: "width:100px; height:100px; border:1px solid black",
+      styleB: "width:100px; height:100px; border:1px solid green",
     };
   },
 };
@@ -25,10 +25,10 @@ export default {
 .rect {
   width: 100px;
   height: 100px;
-  border: 1px solid orangered;
+  border: 1px solid yellow;
 }
 .fill {
-  background: yellow;
+  background: orangered;
   margin-bottom: 20px;
 }
 </style>
