@@ -4,17 +4,19 @@
   <ul>
     <li v-for="(item, idx) in list" :key="idx">{{ idx + 1 }}. {{ item }}</li>
   </ul>
+
   <span v-for="(dan, i) in dans" :key="i">
     <span v-for="(num, j) in nums" :key="j">
-      {{ dan }} * {{ num }} = {{ dan * num }}<br /> </span
-    ><br /> </span
-  ><br />
+      {{ dan }} * {{ num }} = {{ dan * num }}<br>
+    </span><br> 
+  </span><br>
+
   <ul>
     <li v-for="(dan, i) in dans" :key="i">
       <ul>
         <li v-for="(num, j) in nums" :key="j">
           {{ dan }} * {{ num }} = {{ dan * num }}
-        </li>
+        </li><br>
       </ul>
     </li>
   </ul>
