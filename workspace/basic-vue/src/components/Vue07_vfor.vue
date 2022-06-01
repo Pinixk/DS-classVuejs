@@ -10,9 +10,9 @@
     </li>
     <br />
     
-    <li v-for="(item, idx) in result" :key="idx">
-      {{ `${item}*${idx + 1}` }}={{ item }}
-    </li>
+    <!-- <li v-for="(item, idx) in result" :key="idx">
+      {{ item }}
+    </li> -->
     <br />
   </ul>
 
@@ -37,7 +37,7 @@ export default {
 let result = [];
 for (let i = 2; i < 10; i++) {
   for (let j = 1; j < 10; j++) {
-    result.push = [i * j];
+    result.push(i * j);
   }
 }
 </script>
