@@ -24,7 +24,7 @@ import Exercise6 from "./components/Vue06_vif.vue";
 import Exercise7 from "./components/Vue07_vfor.vue";
 import Exercise8 from "./components/Vue08_von.vue";
 import Exercise9 from "./components/Vue09_event.vue";
-import Exercise10 from "./components/Vue10_von_key.vue";
+import Exercise10 from "./components/Vue10_keyEvent.vue";
 
 export default {
   name: "App",
