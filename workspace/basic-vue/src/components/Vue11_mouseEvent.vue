@@ -7,34 +7,23 @@
     v-on:contextmenu="contextmenu"
   />
   <input type="button" value="onMeta" v-on:click.meta="onMeta" />
-  <input type="button" value="onAlt" v-on:click.alt="onAlt" />
-  <input type="button" value="onCtrl" v-on:click.ctrl="onCtrl" />
+  <input type="button" value="onMix" 
+    v-on:click.exact.alt="onMix_Alt" 
+    v-on:click.ctrl="onMix_Ctrl" 
+   />
 </template>
 
 <script>
 export default {
   methods: {
-    mou_left() {
-      console.log("마우스 왼쪽 클릭");
-    },
-    mou_right() {
-      console.log("마우스 오른쪽 클릭");
-    },
-    mou_mid() {
-      console.log("마우스 휠 클릭");
-    },
-    contextmenu() {
-      console.log("마우스 오른쪽 클릭만 유효");
-    },
-    onMeta() {
-      console.log("왼도우 + 마우스 왼쪽 클릭");
-    },
-    onAlt() {
-      console.log("Alt + 마우스 왼쪽 클릭");
-    },
-    onCtrl() {
-      console.log("Ctrl + 마우스 왼쪽 클릭");
-    },
+    mou_left() {console.log("마우스 왼쪽 클릭");},
+    mou_right() {console.log("마우스 오른쪽 클릭");},
+    mou_mid() {console.log("마우스 휠 클릭");},
+    
+    contextmenu() {console.log("마우스 오른쪽 클릭만 유효");},
+    onMeta() {console.log("왼도우 + 마우스 왼쪽 클릭");},
+    onMix_Alt() {console.log("Alt");},
+    onMix_Ctrl() {console.log("Ctrl");},
   },
 };
 </script>
