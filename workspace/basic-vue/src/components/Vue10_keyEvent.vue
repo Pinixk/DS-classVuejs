@@ -2,18 +2,16 @@
   <h1>v-on key event</h1>
   <!-- <input type="submit" id="send" value="Send" v-on:keyup.enter="send" /> -->
   <input type="submit" id="send" value="Send" v-on="{'keyup.enter':send, click:send}" />
-  <!-- <input type="text" v-on:keyup.space="keyPressed($event)"> -->
-  <!-- <input type="text" v-on="{'keyup.page-up:keyPressed'($event,'page-up'),'keyup.space:keyPressed'($event,'space')}"> -->
+  <input type="text" v-on:keyup="keyPressed1($event)">
+  <input type="text" v-on:keyup.page-down='keyPressed2($event,"Page Down")'>
 </template>
 
 <script>
 export default {
   methods: {
-    send() {alert("enter key가 눌러졌습니다.");},
-    keyPressed(e,k) {
-       if(k) alert(`${k}${e.keyCode} is pressed`)
-       else alert(`${e.keyCode} is pressed`)
-       }
+    send() {console.log("Enter key is pressed");},
+    keyPressed1(e) {console.log(String.fromCharCode(e.keyCode)+' is pressed')},
+    keyPressed2(e, caption){console.log(caption+"("+(e.keyCode)+') is pressed')}
   },
 };
 </script>

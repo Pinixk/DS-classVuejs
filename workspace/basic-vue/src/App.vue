@@ -11,6 +11,7 @@
     <div class="grid"><Exercise8 /></div>
     <div class="grid"><Exercise9 /></div>
     <div class="grid"><Exercise10 /></div>
+    <div class="grid"><Exercise11 /></div>
   </div>
 </template>
 
@@ -25,6 +26,7 @@ import Exercise7 from "./components/Vue07_vfor.vue";
 import Exercise8 from "./components/Vue08_von.vue";
 import Exercise9 from "./components/Vue09_event.vue";
 import Exercise10 from "./components/Vue10_keyEvent.vue";
+import Exercise11 from "./components/Vue11_mouseEvent.vue";
 
 export default {
   name: "App",
@@ -39,6 +41,7 @@ export default {
     Exercise8,
     Exercise9,
     Exercise10,
+    Exercise11,
   },
 };
 </script>
