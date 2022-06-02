@@ -4,19 +4,20 @@
   <!-- <button v-on:click="doThis">Add</button> -->
   <button @click="doThis">Add</button>
   <p>위 버튼을 클릭한 횟수는 {{ count }}</p>
-
-  <input
-    type="text"
-    name="txt"
-    id="txt"
+  <!-- <input
+    type="text" name="txt" id="txt" v-bind:value="msg"
     @mouseout="reverse"
     @mouseenter="reverse"
-    v-bind:value="msg"
+  /> -->
+  <input
+    type="text" name="txt" id="txt" v-bind:value="msg"
+    v-on='{mouseout:reverse, mouseenter:reverse}'
   />
   <form action="http://127.0.0.1:8080" method="post">
-    <!-- ref : 엘리먼트나 자식 컴포넌트에 대한 참조를 등록할 때 사용 -->
     <input type="text" name="name" ref="yourName" />
-    <button @click.prevent="isName" type="submit">확인</button>
+    <!-- ref : 엘리먼트나 자식 컴포넌트에 대한 참조를 등록할 때 사용 -->
+    <button @click.prevent.once="isName" type="submit">확인</button>
+    <!-- prevent, once, stop은 각각 적용 가능 -->
   </form>
 </template>
 

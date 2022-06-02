@@ -1,6 +1,6 @@
 <template>
-  <div style="display: grid; grid-template-columns: auto auto auto;" >
-    <div><img alt="Vue logo" src="./assets/logo.png" /></div>
+  <div style="display: grid; grid-template-columns: auto auto" >
+    <div class="grid"><img alt="Vue logo" src="./assets/logo.png" /></div>
     <div class="grid"><Exercise1 /></div>
     <div class="grid"><Exercise2 /></div>
     <div class="grid"><Exercise3 /></div>
@@ -10,6 +10,7 @@
     <div class="grid"><Exercise7 /></div>
     <div class="grid"><Exercise8 /></div>
     <div class="grid"><Exercise9 /></div>
+    <div class="grid"><Exercise10 /></div>
   </div>
 </template>
 
@@ -22,7 +23,8 @@ import Exercise5 from "./components/Vue05_vshow.vue";
 import Exercise6 from "./components/Vue06_vif.vue";
 import Exercise7 from "./components/Vue07_vfor.vue";
 import Exercise8 from "./components/Vue08_von.vue";
-import Exercise9 from "./components/Vue08_von_key.vue";
+import Exercise9 from "./components/Vue09_event.vue";
+import Exercise10 from "./components/Vue10_von_key.vue";
 
 export default {
   name: "App",
@@ -36,6 +38,7 @@ export default {
     Exercise7,
     Exercise8,
     Exercise9,
+    Exercise10,
   },
 };
 </script>
@@ -49,7 +52,9 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-div{
-  margin: 15px;
+.grid{
+  margin: 1px;
+  padding : 40px 0px;
+  border: 1px solid
 }
 </style>
