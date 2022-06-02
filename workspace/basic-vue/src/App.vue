@@ -12,6 +12,8 @@
     <div class="grid"><Exercise9 /></div>
     <div class="grid"><Exercise10 /></div>
     <div class="grid"><Exercise11 /></div>
+    <div class="grid"><Exercise12 /></div>
+    <div class="grid"><Exercise13 /></div>
   </div>
 </template>
 
@@ -27,21 +29,17 @@ import Exercise8 from "./components/Vue08_von.vue";
 import Exercise9 from "./components/Vue09_event.vue";
 import Exercise10 from "./components/Vue10_keyEvent.vue";
 import Exercise11 from "./components/Vue11_mouseEvent.vue";
+import Exercise12 from "./components/Vue12_capture_self.vue";
+import Exercise13 from "./components/Vue13_form_element.vue";
 
 export default {
   name: "App",
   components: {
-    Exercise1,
-    Exercise2,
-    Exercise3,
-    Exercise4,
-    Exercise5,
-    Exercise6,
-    Exercise7,
-    Exercise8,
-    Exercise9,
-    Exercise10,
-    Exercise11,
+    Exercise1,Exercise2,Exercise3,
+    Exercise4,Exercise5,Exercise6,
+    Exercise7,Exercise8,Exercise9,
+    Exercise10,Exercise11,Exercise12,
+    Exercise13,
   },
 };
 </script>
