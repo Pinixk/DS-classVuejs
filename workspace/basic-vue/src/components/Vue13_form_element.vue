@@ -8,7 +8,7 @@
     <p style="white-space: pre-line">{{ multiline }}</p>
     <textarea v-model="multiline" cols="30" rows="10"></textarea>
     <br />
-    <label for="checkbox">동의 유무{{ state }}</label> -->
+    <label for="checkbox">동의 유무{{ state }}</label>
     <input type="checkbox" id="checkbox" v-model="checked" v-on:change="checkIt">
     <br>
     <label for="checkbox">바나나</label>
