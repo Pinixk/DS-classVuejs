@@ -2,8 +2,8 @@
   <!-- <div v-bind:class="classCard" v-for="(component, i) in arrList" :key="i">
     <component v-bind:is="component"></component>
   </div> -->
+  <div class="vueImg"><img alt="Vue logo" src="./assets/logo.png" /></div>
   <div style="display: grid; grid-template-columns: auto auto">
-    <div class="grid"><img alt="Vue logo" src="./assets/logo.png" /></div>
     <div class="grid"><Exercise1 /></div>
     <div class="grid"><Exercise2 /></div>
     <div class="grid"><Exercise3 /></div>
@@ -19,9 +19,11 @@
     <div class="grid"><Exercise13 /></div>
     <div class="grid"><Exercise14 /></div>
     <div class="grid"><Exercise15 /></div>
+    <div class="grid"><Exercise16 /></div>
+    <div class="grid"><Exercise17 /></div>
+    <div class="grid"><Exercise18 /></div>
     <!-- <div class="grid"><Footer /></div> -->
   </div>
-
 </template>
 
 <script>
@@ -38,16 +40,34 @@ import Exercise10 from "./components/Vue10_keyEvent.vue";
 import Exercise11 from "./components/Vue11_mouseEvent.vue";
 import Exercise12 from "./components/Vue12_capture_self.vue";
 import Exercise13 from "./components/Vue13_checkbox.vue";
-import Exercise14 from "./components/Vue14_radio.vue";
-import Exercise15 from "./components/Vue15_select.vue";
+import Exercise14 from "./components/Vue14_checkbox_bind.vue";
+import Exercise15 from "./components/Vue15_radio.vue";
+import Exercise16 from "./components/Vue16_radio_bind.vue";
+import Exercise17 from "./components/Vue17_select.vue";
+import Exercise18 from "./components/Vue18_select_bind.vue";
 
 // import Footer from "./components/Vue_Footer.vue"
 export default {
   name: "App",
   components: {
-    Exercise1,Exercise2,Exercise3,Exercise4,Exercise5,
-    Exercise6,Exercise7,Exercise8,Exercise9,Exercise10,
-    Exercise11,Exercise12,Exercise13,Exercise14,Exercise15,
+    Exercise1,
+    Exercise2,
+    Exercise3,
+    Exercise4,
+    Exercise5,
+    Exercise6,
+    Exercise7,
+    Exercise8,
+    Exercise9,
+    Exercise10,
+    Exercise11,
+    Exercise12,
+    Exercise13,
+    Exercise14,
+    Exercise15,
+    Exercise16,
+    Exercise17,
+    Exercise18,
     // Footer,
   },
 };
@@ -61,11 +81,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background: rgb(214, 230, 245);
 }
 .grid {
-  margin: 2px;
-  padding: 40px 0px;
+  margin: 5px;
+  padding: 40px;
   border: 1px solid;
-  border-radius: 30px;
+  border-radius: 50px;
+  background: rgb(163, 204, 163);
 }
 </style>

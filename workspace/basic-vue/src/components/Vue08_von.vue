@@ -10,11 +10,11 @@
     @mouseenter="reverse"
   /> -->
   <input
-    type="text" name="txt" id="txt" v-bind:value="msg"
+    type="text" name="txt" id="txt" size="16" v-bind:value="msg"
     v-on='{mouseout:reverse, mouseenter:reverse}'
   />
   <form action="http://127.0.0.1:8080" method="post">
-    <input type="text" name="name" ref="yourName" />
+    <input type="text" name="name" size="10" ref="yourName" />
     <!-- ref : 엘리먼트나 자식 컴포넌트에 대한 참조를 등록할 때 사용 -->
     <button @click.prevent.once="isName" type="submit">확인</button>
     <!-- prevent, once, stop은 각각 적용 가능 -->
