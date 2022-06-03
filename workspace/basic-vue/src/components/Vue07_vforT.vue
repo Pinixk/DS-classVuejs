@@ -1,5 +1,5 @@
 <template>
-  <h1>v-for</h1>
+  <h1>07 v-for</h1>
   Which of the following cities is your favourite?
   <ul>
     <li v-for="(item, idx) in list" :key="idx">{{ idx + 1 }}. {{ item }}</li>

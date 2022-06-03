@@ -1,5 +1,5 @@
 <template>
-  <h1>form element select binding</h1>
+  <h1>18 form element select binding</h1>
   select는 바인딩을 할 때 option의 value에 binding을 한다.
   <select name="selItem" ref="selItem" id="selItem" v-model="selected" v-on:change="selChange">
     <option value="반지">ring</option>

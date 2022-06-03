@@ -1,6 +1,6 @@
 <template>
-  <h1>form element join</h1>
-  <form action="Vue20_memberList.vue">
+  <h1>19 form element join</h1>
+  <form action="Vue20_memberList.vue" ref="frm">
     <fieldset>
       <legend>회원가입</legend>
       <div>
@@ -28,24 +28,23 @@
       <div>
         <label for="" class="title">Gender</label>
         <label :for="item" v-for="(item, idx) in genLi" :key="idx">{{ item }}
-          <input type="radio" name="gen" :id="item" :value="item" v-model="gen"/>
+          <input type="radio" name="gen" :id="item" :value="item" :ref="item" v-model="gen"/>
         </label>
       </div>
       <div>
         <label for="" class="title">Mobile</label>
-        <select name="mobile" id="mobile" v-model="mob">
-          <option :value="item" v-for="(item, idx) in mobLi" :key="idx">
-            {{ item }}
+        <select name="mobile" ref="mobi1" v-model="mob">
+          <option :value="item" v-for="(item, idx) in mobLi" :key="idx">{{ item }}
           </option>
         </select>
-        - <input type="text" id="mobile1" size="1"/> -
-        <input type="text" id="mobile2" size="1"/>
-        <input type="hidden" name="mobile">
+        - <input type="text" ref="mob2" size="1" /> -
+        <input type="text" ref="mob3" size="1"/>
+        <input type="hidden" name="mobile" ref="mob">
       </div>
       <div>
         <label class="title"></label>
-        <button ref="btnJoin" @click="join">Join</button>
-        <button @click="Cancel">Cancel</button>
+        <button ref="btnJoin" @click.prevent="join">Join</button>
+        <button ref="btnCancel" @click="cancel">Cancel</button>
       </div>
     </fieldset>
   </form>
@@ -57,12 +56,38 @@ export default {
     return {
       hob: ["농구"],
       hobLi: ["축구", "농구", "배구"],
-      gen: "male",
+      gen: "",
       genLi: ["male", "female"],
       mob: "010",
       mobLi: ["010", "011", "019"],
     };
   },
+  methods:{
+    join(){
+      const id = this.$refs.id;
+      const name = this.$refs.name;
+      const pw = this.$refs.pw;
+      const repw = this.$refs.repw;
+      // const mob1 = this.$refs.mob1;
+      const mob2 = this.$refs.mob2;
+      const mob3 = this.$refs.mob3;
+      // const mob = this.$refs.mob;
+      if (id.value === "") {alert("ID를 입력해주세요"); id.focus(); return;}
+      if (name.value === "") {alert("이름을 입력해주세요"); name.focus(); return;}
+      if (pw.value === "") {alert("비밀번호을 입력해주세요"); pw.focus(); return;}
+      if (repw.value !== pw.value) {alert("비밀번호와 다릅니다."); repw.focus(); return;}
+      // if (mob1.value === "") {alert("전화번호을 입력해주세요"); mob1.focus(); return;}
+      if (mob2.value === "") {alert("전화번호을 입력해주세요"); mob2.focus(); return;}
+      if (mob3.value === "") {alert("전화번호을 입력해주세요"); mob3.focus(); return;}
+      // if (mob.value === "") {alert("전화번호을 입력해주세요"); mob.focus(); return;}
+    },
+    cancel(){
+      const frm = this.$refs.frm
+      const radioMale = this.$refs.male
+      frm.reset()
+      radioMale.checked = true
+    }
+  }
 };
 </script>
 

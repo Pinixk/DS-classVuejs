@@ -1,5 +1,5 @@
 <template>
-  <h1>form - check box</h1>
+  <h1>13 form - check box</h1>
   <form action="">
     <p>Message is {{ msg }}</p>
     <input placeholder="edit me" v-model="msg" />

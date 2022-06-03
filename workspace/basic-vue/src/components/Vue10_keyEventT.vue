@@ -1,5 +1,5 @@
 <template>
-  <h1>v-on key event</h1>
+  <h1>10 v-on key event</h1>
   <!-- <input type="submit" value="Send" v-on:keyup.enter="send"> -->
   <input type="submit" value="Send" v-on="{ 'keyup.enter':send, click:send }">
   enter키와 클릭할 때 반응<br>

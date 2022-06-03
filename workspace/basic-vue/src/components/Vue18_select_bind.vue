@@ -1,5 +1,5 @@
 <template>
-  <h1>form - select binding</h1>
+  <h1>18 form - select binding</h1>
   <!-- select는 바인딩 시 option의 value에 binding 해야함 -->
   <select name="selItem" id="selItem" v-model="selected" v-on:change="selChg">
     <option value="" disabled>Select One</option>

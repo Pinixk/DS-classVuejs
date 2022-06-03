@@ -1,5 +1,5 @@
 <template>
-  <h1>v-on key event</h1>
+  <h1>10 v-on key event</h1>
   <!-- <input type="submit" id="send" value="Send" v-on:keyup.enter="send" /> -->
   <input type="submit" id="send" value="Send" v-on="{'keyup.enter':send, click:send}" />
   <input type="text" size="10" v-on:keyup="keyPressed1($event)">

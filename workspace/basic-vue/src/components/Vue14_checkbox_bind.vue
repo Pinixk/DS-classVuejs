@@ -1,5 +1,5 @@
 <template>
-  <h1>form - checkbox binding</h1>
+  <h1>14 form - checkbox binding</h1>
   <label for="single">
     <!-- 단일 checkbox는 체크 여부에 따라 다른 상태값을 설정 -->
     <input

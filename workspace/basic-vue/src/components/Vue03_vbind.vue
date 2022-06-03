@@ -1,4 +1,5 @@
 <template>
+  <h1>03 v-bind</h1>
   <div :id="dynamicId">Hello</div>
   <img :src="url + '100x100'" alt="" />
   <div :class="[classA, classB]"></div>

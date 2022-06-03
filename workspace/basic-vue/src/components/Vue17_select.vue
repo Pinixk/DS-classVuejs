@@ -1,5 +1,5 @@
 <template>
-  <h1>form - select</h1>
+  <h1>17 form - select</h1>
   <select v-model="selected" name="" id="">
     <!-- select의 option에 value값을 넣지 않으면 text값이 value가 됨 -->
     <option value="" disabled>Please select one</option>

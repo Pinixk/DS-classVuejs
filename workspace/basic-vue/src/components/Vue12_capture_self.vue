@@ -1,5 +1,5 @@
 <template>
-  <h1>v-on caputre, self</h1>
+  <h1>12 v-on caputre, self</h1>
   <div v-on:click="doTop" id="top">
     <div v-on:click.self="doMid" id="middle">
       <button type="button" v-on:click="doBot">Bubble</button>

@@ -1,5 +1,5 @@
 <template>
-  <h1>form - radio binding</h1>
+  <h1>16 form - radio binding</h1>
   <label for="radioA">A</label>
   <input type="radio" name="radios" id="radioA" v-model="pick" v-bind:value="A" selected />
   <label for="radioB">B</label>

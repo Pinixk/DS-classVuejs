@@ -1,5 +1,5 @@
 <template>
-  <h1>v-on mouse event</h1>
+  <h1>11 v-on mouse event</h1>
   <!-- 키 수식어 -->
   <input type="button" value="click"
     v-on:click.left="mou_left"
