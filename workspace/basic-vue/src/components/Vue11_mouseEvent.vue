@@ -8,7 +8,7 @@
   />
   <input type="button" value="onMeta" v-on:click.meta="onMeta" />
   <input type="button" value="onMix" 
-    v-on:click.exact.alt="onMix_Alt" 
+    v-on:click.alt="onMix_Alt" 
     v-on:click.ctrl="onMix_Ctrl" 
    />
 </template>
