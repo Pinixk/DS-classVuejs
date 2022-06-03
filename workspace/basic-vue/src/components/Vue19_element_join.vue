@@ -3,34 +3,47 @@
   <form action="Vue20_memberList.vue" ref="frm">
     <fieldset>
       <legend>회원가입</legend>
+      <!-- id -->
       <div>
         <label for="id" class="title">ID </label>
         <input type="text" ref="id" id="id" />
       </div>
+
+      <!-- name -->
       <div>
         <label for="name" class="title">Name</label>
         <input type="text" ref="name" id="name" />
       </div>
+
+      <!-- password -->
       <div>
         <label for="pw" class="title">Password</label>
         <input type="password" ref="pw" id="pw" />
       </div>
+
+      <!-- re password -->
       <div>
         <label for="repw" class="title">Re Password</label>
         <input type="password" ref="repw" id="repw" />
       </div>
+
+      <!-- hobby -->
       <div>
         <label for="" class="title">Hobby</label>
         <label :for="item" v-for="(item, idx) in hobLi" :key="idx">{{ item }}
           <input type="checkbox" name="hob" :id="item" :value="item" v-model="hob"/>
         </label>
       </div>
+
+      <!-- gender -->
       <div>
         <label for="" class="title">Gender</label>
         <label :for="item" v-for="(item, idx) in genLi" :key="idx">{{ item }}
           <input type="radio" name="gen" :id="item" :value="item" :ref="item" v-model="gen"/>
         </label>
       </div>
+
+      <!-- mobile -->
       <div>
         <label for="" class="title">Mobile</label>
         <select name="mobile" ref="mobi1" v-model="mob">
@@ -41,6 +54,8 @@
         <input type="text" ref="mob3" size="1"/>
         <input type="hidden" name="mobile" ref="mob">
       </div>
+
+      <!-- button -->
       <div>
         <label class="title"></label>
         <button ref="btnJoin" @click.prevent="join">Join</button>
@@ -70,6 +85,7 @@ export default {
       const repw = this.$refs.repw;
       const mob2 = this.$refs.mob2;
       const mob3 = this.$refs.mob3;
+
       if (id.value === "") {alert("ID를 입력해주세요"); id.focus(); return;}
       if (name.value === "") {alert("이름을 입력해주세요"); name.focus(); return;}
       if (pw.value === "") {alert("비밀번호을 입력해주세요"); pw.focus(); return;}
