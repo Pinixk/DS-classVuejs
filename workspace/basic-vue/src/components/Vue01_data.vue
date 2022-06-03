@@ -1,10 +1,10 @@
 <template>
   <h1>Options data</h1>
-  <h1>{{ a }}</h1>
+  <h2>{{ a }}</h2>
 </template>
 
 <script>
-const data = {a:2};
+const data = {a:'vue start'};
 export default {
   data() {
     return data;

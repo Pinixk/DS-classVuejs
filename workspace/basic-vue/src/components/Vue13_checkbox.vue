@@ -1,5 +1,5 @@
 <template>
-  <h1>check box</h1>
+  <h1>form - check box</h1>
   <form action="">
     <p>Message is {{ msg }}</p>
     <input placeholder="edit me" v-model="msg" />
@@ -26,7 +26,7 @@ export default {
     return {
       msg: "누구인가?",
       multiline: "누가 기침소리를 내었어!",
-      checked: true,
+      checked: false,
       state: "",
       selFruit: ["banana","peach"],
     };

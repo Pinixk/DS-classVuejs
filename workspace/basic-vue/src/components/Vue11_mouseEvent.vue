@@ -1,11 +1,13 @@
 <template>
   <h1>v-on mouse event</h1>
+  <!-- 키 수식어 -->
   <input type="button" value="click"
     v-on:click.left="mou_left"
     v-on:click.right="mou_right"
     v-on:click.middle="mou_mid"
     v-on:contextmenu="contextmenu"
   />
+  <!-- 시스템 키 수식어 -->
   <input type="button" value="onMeta" v-on:click.meta="onMeta" />
   <input type="button" value="onMix" 
     v-on:click.alt="onMix_Alt" 

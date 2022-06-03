@@ -5,17 +5,19 @@
   <br />
 
   <div>당신의 학점은</div>
+  <input type="text" v-model="score">
   <div v-if="score >= 90">A</div>
   <div v-else-if="score >= 80">B</div>
   <div v-else-if="score >= 70">C</div>
-  <div v-else>A</div>
+  <div v-else>F</div>
 </template>
 
 <script>
-// const num = prompt("당신의 점수를 입력하세요");
-// export default {
-//   data: () => ({ score: num }),
-// };
+export default {
+  data:()=>{
+    return {score:0}
+  }
+};
 </script>
 
 <style>

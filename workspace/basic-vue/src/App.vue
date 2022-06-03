@@ -1,5 +1,8 @@
 <template>
-  <div style="display: grid; grid-template-columns: auto auto" >
+  <!-- <div v-bind:class="classCard" v-for="(component, i) in arrList" :key="i">
+    <component v-bind:is="component"></component>
+  </div> -->
+  <div style="display: grid; grid-template-columns: auto auto">
     <div class="grid"><img alt="Vue logo" src="./assets/logo.png" /></div>
     <div class="grid"><Exercise1 /></div>
     <div class="grid"><Exercise2 /></div>
@@ -15,7 +18,11 @@
     <div class="grid"><Exercise12 /></div>
     <div class="grid"><Exercise13 /></div>
     <div class="grid"><Exercise14 /></div>
+    <div class="grid"><Exercise15 /></div>
+    <div class="grid"><Footer /></div>
   </div>
+
+  <footer msg="Footer for Your Vue.js App"></footer>
 </template>
 
 <script>
@@ -33,15 +40,16 @@ import Exercise11 from "./components/Vue11_mouseEvent.vue";
 import Exercise12 from "./components/Vue12_capture_self.vue";
 import Exercise13 from "./components/Vue13_checkbox.vue";
 import Exercise14 from "./components/Vue14_radio.vue";
+import Exercise15 from "./components/Vue15_select.vue";
 
+import Footer from "./components/Vue_Footer.vue"
 export default {
   name: "App",
   components: {
-    Exercise1,Exercise2,Exercise3,
-    Exercise4,Exercise5,Exercise6,
-    Exercise7,Exercise8,Exercise9,
-    Exercise10,Exercise11,Exercise12,
-    Exercise13,Exercise14,
+    Exercise1,Exercise2,Exercise3,Exercise4,Exercise5,
+    Exercise6,Exercise7,Exercise8,Exercise9,Exercise10,
+    Exercise11,Exercise12,Exercise13,Exercise14,Exercise15,
+    Footer,
   },
 };
 </script>
@@ -55,9 +63,10 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.grid{
-  margin: 1px;
-  padding : 40px 0px;
-  border: 1px solid
+.grid {
+  margin: 2px;
+  padding: 40px 0px;
+  border: 1px solid;
+  border-radius: 30px;
 }
 </style>
