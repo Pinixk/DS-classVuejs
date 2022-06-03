@@ -15,7 +15,7 @@ export default {
 <style>
 .footer{
    height:100px;
-   magin : 0;
+   margin : 0;
    background: rgb(34, 227, 111);
    line-height:90px;
    padding-left:50px;

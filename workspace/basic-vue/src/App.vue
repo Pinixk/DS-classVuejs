@@ -19,10 +19,9 @@
     <div class="grid"><Exercise13 /></div>
     <div class="grid"><Exercise14 /></div>
     <div class="grid"><Exercise15 /></div>
-    <div class="grid"><Footer /></div>
+    <!-- <div class="grid"><Footer /></div> -->
   </div>
 
-  <footer msg="Footer for Your Vue.js App"></footer>
 </template>
 
 <script>
@@ -42,14 +41,14 @@ import Exercise13 from "./components/Vue13_checkbox.vue";
 import Exercise14 from "./components/Vue14_radio.vue";
 import Exercise15 from "./components/Vue15_select.vue";
 
-import Footer from "./components/Vue_Footer.vue"
+// import Footer from "./components/Vue_Footer.vue"
 export default {
   name: "App",
   components: {
     Exercise1,Exercise2,Exercise3,Exercise4,Exercise5,
     Exercise6,Exercise7,Exercise8,Exercise9,Exercise10,
     Exercise11,Exercise12,Exercise13,Exercise14,Exercise15,
-    Footer,
+    // Footer,
   },
 };
 </script>
