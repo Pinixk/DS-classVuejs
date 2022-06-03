@@ -71,7 +71,7 @@ export default {
     return {
       hob: ["농구"],
       hobLi: ["축구", "농구", "배구"],
-      gen: "",
+      gen: "male",
       genLi: ["male", "female"],
       mob: "010",
       mobLi: ["010", "011", "019"],
