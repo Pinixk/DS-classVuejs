@@ -68,18 +68,14 @@ export default {
       const name = this.$refs.name;
       const pw = this.$refs.pw;
       const repw = this.$refs.repw;
-      // const mob1 = this.$refs.mob1;
       const mob2 = this.$refs.mob2;
       const mob3 = this.$refs.mob3;
-      // const mob = this.$refs.mob;
       if (id.value === "") {alert("ID를 입력해주세요"); id.focus(); return;}
       if (name.value === "") {alert("이름을 입력해주세요"); name.focus(); return;}
       if (pw.value === "") {alert("비밀번호을 입력해주세요"); pw.focus(); return;}
       if (repw.value !== pw.value) {alert("비밀번호와 다릅니다."); repw.focus(); return;}
-      // if (mob1.value === "") {alert("전화번호을 입력해주세요"); mob1.focus(); return;}
       if (mob2.value === "") {alert("전화번호을 입력해주세요"); mob2.focus(); return;}
       if (mob3.value === "") {alert("전화번호을 입력해주세요"); mob3.focus(); return;}
-      // if (mob.value === "") {alert("전화번호을 입력해주세요"); mob.focus(); return;}
     },
     cancel(){
       const frm = this.$refs.frm
