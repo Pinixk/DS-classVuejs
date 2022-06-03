@@ -22,6 +22,7 @@
     <div class="grid"><Exercise16 /></div>
     <div class="grid"><Exercise17 /></div>
     <div class="grid"><Exercise18 /></div>
+    <div class="grid"><Exercise19 /></div>
     <!-- <div class="grid"><Footer /></div> -->
   </div>
 </template>
@@ -45,6 +46,7 @@ import Exercise15 from "./components/Vue15_radio.vue";
 import Exercise16 from "./components/Vue16_radio_bind.vue";
 import Exercise17 from "./components/Vue17_select.vue";
 import Exercise18 from "./components/Vue18_select_bind.vue";
+import Exercise19 from "./components/Vue19_element_join.vue";
 
 // import Footer from "./components/Vue_Footer.vue"
 export default {
@@ -68,6 +70,7 @@ export default {
     Exercise16,
     Exercise17,
     Exercise18,
+    Exercise19,
     // Footer,
   },
 };
@@ -80,14 +83,23 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-  background: rgb(214, 230, 245);
+  padding: 5px;
+  background: rgb(152,170,124);
+  border-radius: 20px;
 }
 .grid {
   margin: 5px;
   padding: 40px;
   border: 1px solid;
-  border-radius: 50px;
-  background: rgb(163, 204, 163);
+  border-radius: 25px;
+  background: rgb(214,230,245);
+}
+.vueImg{
+  width: auto;
+  background:white;
+  border: 1px solid;
+  border-radius: 25px;
+  background:rgb(228,225,223);
+  margin : 5px;
 }
 </style>

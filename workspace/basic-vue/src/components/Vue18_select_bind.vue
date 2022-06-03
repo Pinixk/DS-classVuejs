@@ -10,7 +10,7 @@
     <option value="귀걸이">Ear ring</option></select
   ><br />
   <span
-    ><h2>{{ selected }}</h2></span
+    ><h2>{{ selText }} {{ selected }}</h2></span
   >
 </template>
 
@@ -19,6 +19,7 @@ export default {
   data() {
     return {
       selected: "",
+      selText: "",
     };
   },
   methods: {
@@ -26,6 +27,7 @@ export default {
       const sel = e.target;
       console.log(sel.value);
       console.log(sel.options[sel.selectedIndex].text);
+      this.selText = sel.options[sel.selectedIndex].text;
     },
   },
 };
