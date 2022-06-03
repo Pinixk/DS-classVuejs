@@ -48,4 +48,5 @@ export default {
     margin:3px;
     text-align: left;
   }
+  /* fieldset div{width:100%; text-align: left;} */
 </style>
