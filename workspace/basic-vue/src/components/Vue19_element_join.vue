@@ -31,7 +31,7 @@
       <div>
         <label for="" class="title">Hobby</label>
         <label :for="item" v-for="(item, idx) in hobLi" :key="idx">{{ item }}
-          <input type="checkbox" name="hob" :id="item" :value="item" v-model="hob"/>
+          <input type="checkbox" name="hob" :id="item" :value="item" ref="hob" v-model="hob"/>
         </label>
       </div>
 
@@ -39,15 +39,15 @@
       <div>
         <label for="" class="title">Gender</label>
         <label :for="item" v-for="(item, idx) in genLi" :key="idx">{{ item }}
-          <input type="radio" name="gen" :id="item" :value="item" :ref="item" v-model="gen"/>
+          <input type="radio" name="gen" :id="item" :value="item" ref="gen" v-model="gen"/>
         </label>
       </div>
 
       <!-- mobile -->
       <div>
         <label for="" class="title">Mobile</label>
-        <select name="mobile" ref="mobi1" v-model="mob">
-          <option :value="item" v-for="(item, idx) in mobLi" :key="idx">{{ item }}
+        <select name="mobile" v-model="mob">
+          <option :value="item" v-for="(item, idx) in mobLi" :key="idx" ref="mob1">{{ item }}
           </option>
         </select>
         - <input type="text" ref="mob2" size="1" /> -
@@ -59,7 +59,7 @@
       <div>
         <label class="title"></label>
         <button ref="btnJoin" @click.prevent="join">Join</button>
-        <button ref="btnCancel" @click="cancel">Cancel</button>
+        <button ref="btnCancel" @click.prevent="cancel">Cancel</button>
       </div>
     </fieldset>
   </form>
@@ -69,12 +69,14 @@
 export default {
   data() {
     return {
-      hob: ["농구"],
+      hob: [""],
       hobLi: ["축구", "농구", "배구"],
-      gen: "male",
+      gen: "",
       genLi: ["male", "female"],
       mob: "010",
-      mobLi: ["010", "011", "019"],
+      mobLi: ["010","011","016"],
+      sel:"sel",
+      notSel:""
     };
   },
   methods:{
@@ -85,19 +87,26 @@ export default {
       const repw = this.$refs.repw;
       const mob2 = this.$refs.mob2;
       const mob3 = this.$refs.mob3;
+      const gen = this.$refs.gen;
+      const hob = this.$refs.hob;
 
       if (id.value === "") {alert("ID를 입력해주세요"); id.focus(); return;}
       if (name.value === "") {alert("이름을 입력해주세요"); name.focus(); return;}
       if (pw.value === "") {alert("비밀번호을 입력해주세요"); pw.focus(); return;}
       if (repw.value !== pw.value) {alert("비밀번호와 다릅니다."); repw.focus(); return;}
+      if (hob[0].checked == false && hob[1].checked == false && hob[2].checked == false) {alert("취미를 입력해주세요"); return;}
+      if (gen[0].checked === false && gen[1].checked === false) {alert("성별을 입력해주세요"); return;}
       if (mob2.value === "") {alert("전화번호을 입력해주세요"); mob2.focus(); return;}
       if (mob3.value === "") {alert("전화번호을 입력해주세요"); mob3.focus(); return;}
     },
     cancel(){
       const frm = this.$refs.frm
-      const radioMale = this.$refs.male
+      const gen = this.$refs.gen;
+      const hob = this.$refs.hob;
+
       frm.reset()
-      radioMale.checked = true
+      gen[0].checked = true;
+      hob[1].checked = true;
     }
   }
 };
