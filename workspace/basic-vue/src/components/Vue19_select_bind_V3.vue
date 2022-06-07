@@ -36,12 +36,13 @@ export default {
     const selChange = () => {
       getSelText()
     };
+
     onMounted(() => {
       getSelText();
     });
+
     return {
-      selItem,selText,selected,selectText,
-      getSelText,selChange,
+      selItem,selText,selected,selectText,getSelText,selChange,
     };
   },
 };

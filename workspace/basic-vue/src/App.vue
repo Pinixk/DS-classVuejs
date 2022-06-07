@@ -24,6 +24,7 @@
     <div class="grid"><Exercise18 /></div>
     <div class="grid"><Exercise19 /></div>
     <div class="grid"><Exercise20 /></div>
+    <div class="grid"><Exercise21 /></div>
 
     <!-- <div class="grid"><Footer /></div> -->
   </div>
@@ -49,7 +50,8 @@ import Exercise16 from "./components/Vue16_radio_bind.vue";
 import Exercise17 from "./components/Vue17_select.vue";
 import Exercise18 from "./components/Vue18_select_bind_V2.vue";
 import Exercise19 from "./components/Vue19_select_bind_V3.vue";
-import Exercise20 from "./components/Vue20_element_join.vue";
+import Exercise20 from "./components/Vue20_V2_V3_ref_reactive.vue";
+import Exercise21 from "./components/Vue21_element_join.vue";
 
 // import Footer from "./components/Vue_Footer.vue"
 export default {
@@ -75,6 +77,7 @@ export default {
     Exercise18,
     Exercise19,
     Exercise20,
+    Exercise21,
     
     // Footer,
   },

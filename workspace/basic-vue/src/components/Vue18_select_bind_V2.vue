@@ -25,7 +25,6 @@ export default {
       const sel = e.target;
       const selText = this.$refs.selText;
       selText.textContent = sel.options[sel.selectedIndex].text;
-
       this.selectText = sel.options[sel.selectedIndex].text;
     },
     getSelText() {
@@ -33,7 +32,6 @@ export default {
       const selItem = this.$refs.selItem;
       const selText = this.$refs.selText;
       selText.textContent = selItem.options[selItem.selectedIndex].text;
-      
       this.selectText = selItem.options[selItem.selectedIndex].text;
 
       // dom으로 접근
