@@ -4,7 +4,7 @@
   <img :src="url + '100x100'" alt="" />
   <div :class="[classA, classB]"></div>
   <div :style="[styleA, styleB]"></div>
-  <div :="{id:box,'data-url':url}"></div>
+  <div :="{'data-url':url}"></div>
 </template>
 
 <script>

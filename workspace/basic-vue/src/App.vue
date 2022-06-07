@@ -25,6 +25,7 @@
     <div class="grid"><Exercise19 /></div>
     <div class="grid"><Exercise20 /></div>
     <div class="grid"><Exercise21 /></div>
+    <div class="grid"><Exercise22 /></div>
 
     <!-- <div class="grid"><Footer /></div> -->
   </div>
@@ -52,6 +53,7 @@ import Exercise18 from "./components/Vue18_select_bind_V2.vue";
 import Exercise19 from "./components/Vue19_select_bind_V3.vue";
 import Exercise20 from "./components/Vue20_V2_V3_ref_reactive.vue";
 import Exercise21 from "./components/Vue21_element_join.vue";
+import Exercise22 from "./components/Vue22_scriptSetup.vue";
 
 // import Footer from "./components/Vue_Footer.vue"
 export default {
@@ -78,6 +80,7 @@ export default {
     Exercise19,
     Exercise20,
     Exercise21,
+    Exercise22,
     
     // Footer,
   },

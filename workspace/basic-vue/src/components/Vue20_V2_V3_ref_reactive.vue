@@ -47,7 +47,7 @@ export default {
 </script> -->
 
 <template>
-  <h1>Composition API reactive</h1>
+  <h1> 20 Composition API reactive</h1>
   <button @click="addOne">Add</button>
   <span ref="result">count is</span>
 </template>
@@ -59,7 +59,7 @@ export default {
       // reactive 하나로 복수의 변수를 retrun 가능
       const state = reactive({
          count : 0
-      })       
+      })
       const result = ref(null)   // span태그를 null로 초기화
 
       function addOne(){

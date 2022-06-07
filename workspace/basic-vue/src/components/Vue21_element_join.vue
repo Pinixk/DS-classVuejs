@@ -1,5 +1,5 @@
 <template>
-  <h1>20 form element join</h1>
+  <h1>21 form element join</h1>
   <form action="Vue21_memberList.vue" ref="frm">
     <fieldset>
       <legend>회원가입</legend>
