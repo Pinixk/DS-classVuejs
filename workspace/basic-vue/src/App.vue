@@ -3,7 +3,7 @@
     <component v-bind:is="component"></component>
   </div> -->
   <div class="vueImg"><img alt="Vue logo" src="./assets/logo.png" /></div>
-  <div style="display: grid; grid-template-columns: auto auto">
+  <div style="display: grid; grid-template-columns: auto">
     <div class="grid"><Exercise1 /></div>
     <div class="grid"><Exercise2 /></div>
     <div class="grid"><Exercise3 /></div>
