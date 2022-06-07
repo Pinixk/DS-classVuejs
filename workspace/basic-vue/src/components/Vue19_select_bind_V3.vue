@@ -1,40 +1,48 @@
 <template>
-  <h1>18 form - select binding</h1>
-  <!-- select는 바인딩 시 option의 value에 binding 해야함 -->
-  <select name="selItem" id="selItem" v-model="selected" v-on:change="selChg">
-    <option value="" disabled>Select One</option>
-    <option value="시계">Watch</option>
-    <option value="반지">Ring</option>
-    <option value="목걸이">Necklace</option>
-    <option value="팔찌">Bracelet</option>
-    <option value="귀걸이">Ear ring</option></select><br />
-  <span><h2>{{ selText }} {{ selected }}</h2></span>
+  <h1>19 select Composition API</h1>
+  <select
+    name="selItem"
+    ref="selItem"
+    id="selItem"
+    v-model="selected"
+    v-on:change="selChange"
+  >
+    <option value="반지">ring</option>
+    <option value="목걸이">necklace</option>
+    <option value="귀걸이">earring</option>
+    <option value="시계">watch</option>
+    <option value="팔찌">bracelet</option></select><br /><br />
+  <span><h2>{{ selected }}/{{ selectText }}</h2></span><br />
+  <span><h2>{{ selected }} / <span id="selText" ref="selText"></span></h2></span>
 </template>
 
 <script>
+import { onMounted, ref } from "@vue/runtime-core";
 export default {
-  data() {
-    return {
-      selected: "",
-      selText: "",
+  // composition API
+  setup() {
+    const selItem = ref(null);
+    const selText = ref(null);
+    const selected = "반지";
+    const selectText = ref("");
+
+    const getSelText = function () {
+      // console.log(selItem);
+
+      const tmp = selItem.value.options[selItem.value.selectedIndex].text;
+      selectText.value = tmp
+      selText.value.textContent = tmp
     };
-  },
-  methods: {
-    selChg(e) {
-      const sel = e.target;
-      console.log(sel.value);
-      console.log(sel.options[sel.selectedIndex].text);
-      this.selText = sel.options[sel.selectedIndex].text;
-    },
-    getSelText() {
-      const selItem = this.$refs.selItem;
-      const selText = this.$refs.selText;
-      this.selText = selItem.options[selItem.selectedIndex].text;
-      selText.textContent = selItem.options[selItem.selectedIndex].text;
-    },
-  },
-  mounted: function () {
-    this.getSelText();
+    const selChange = () => {
+      getSelText()
+    };
+    onMounted(() => {
+      getSelText();
+    });
+    return {
+      selItem,selText,selected,selectText,
+      getSelText,selChange,
+    };
   },
 };
 </script>
