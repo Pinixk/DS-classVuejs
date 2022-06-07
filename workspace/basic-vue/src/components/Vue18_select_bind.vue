@@ -7,11 +7,8 @@
     <option value="반지">Ring</option>
     <option value="목걸이">Necklace</option>
     <option value="팔찌">Bracelet</option>
-    <option value="귀걸이">Ear ring</option></select
-  ><br />
-  <span
-    ><h2>{{ selText }} {{ selected }}</h2></span
-  >
+    <option value="귀걸이">Ear ring</option></select><br />
+  <span><h2>{{ selText }} {{ selected }}</h2></span>
 </template>
 
 <script>
@@ -29,6 +26,15 @@ export default {
       console.log(sel.options[sel.selectedIndex].text);
       this.selText = sel.options[sel.selectedIndex].text;
     },
+    getSelText() {
+      const selItem = this.$refs.selItem;
+      const selText = this.$refs.selText;
+      this.selText = selItem.options[selItem.selectedIndex].text;
+      selText.textContent = selItem.options[selItem.selectedIndex].text;
+    },
+  },
+  mounted: function () {
+    this.getSelText();
   },
 };
 </script>

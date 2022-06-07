@@ -1,6 +1,6 @@
 <template>
-  <h1>19 form element join</h1>
-  <form action="Vue20_memberList.vue" ref="frm">
+  <h1>20 form element join</h1>
+  <form action="Vue21_memberList.vue" ref="frm">
     <fieldset>
       <legend>회원가입</legend>
       <!-- id -->
@@ -69,9 +69,9 @@
 export default {
   data() {
     return {
-      hob: [""],
+      hob: ["농구"],
       hobLi: ["축구", "농구", "배구"],
-      gen: "",
+      gen: "male",
       genLi: ["male", "female"],
       mob: "010",
       mobLi: ["010","011","016"],
@@ -81,6 +81,7 @@ export default {
   },
   methods:{
     join(){
+      const frm = this.$refs.frm
       const id = this.$refs.id;
       const name = this.$refs.name;
       const pw = this.$refs.pw;
@@ -98,15 +99,20 @@ export default {
       if (gen[0].checked === false && gen[1].checked === false) {alert("성별을 입력해주세요"); return;}
       if (mob2.value === "") {alert("전화번호을 입력해주세요"); mob2.focus(); return;}
       if (mob3.value === "") {alert("전화번호을 입력해주세요"); mob3.focus(); return;}
+
+      frm.submit()
     },
     cancel(){
+      // this.$refs.frm.reset()
+      // document.querySelector("#male").checked = true;
+
       const frm = this.$refs.frm
       const gen = this.$refs.gen;
-      const hob = this.$refs.hob;
-
+      // const hob = this.$refs.hob;
+ 
       frm.reset()
       gen[0].checked = true;
-      hob[1].checked = true;
+      // hob[1].checked = true;
     }
   }
 };
