@@ -26,6 +26,8 @@
     <div class="grid"><Exercise20 /></div>
     <div class="grid"><Exercise21 /></div>
     <div class="grid"><Exercise22 /></div>
+    <div class="grid"><Exercise23 /></div>
+    <div class="grid"><Exercise24 /></div>
 
     <!-- <div class="grid"><Footer /></div> -->
   </div>
@@ -54,6 +56,8 @@ import Exercise19 from "./components/Vue19_select_bind_V3.vue";
 import Exercise20 from "./components/Vue20_V2_V3_ref_reactive.vue";
 import Exercise21 from "./components/Vue21_element_join.vue";
 import Exercise22 from "./components/Vue22_scriptSetup.vue";
+import Exercise23 from "./components/Vue23_vpre.vue";
+import Exercise24 from "./components/Vue24_computed.vue";
 
 // import Footer from "./components/Vue_Footer.vue"
 export default {
@@ -81,6 +85,8 @@ export default {
     Exercise20,
     Exercise21,
     Exercise22,
+    Exercise23,
+    Exercise24,
     
     // Footer,
   },
@@ -95,7 +101,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   padding: 5px;
-  background: rgb(152,170,124);
+  background: rgb(214,230,245);
   border-radius: 20px;
 }
 .grid {
@@ -103,14 +109,13 @@ export default {
   padding: 40px;
   border: 1px solid;
   border-radius: 25px;
-  background: rgb(214,230,245);
+  background: rgb(255, 255, 255);
 }
 .vueImg{
   width: auto;
   background:white;
   border: 1px solid;
   border-radius: 25px;
-  background:rgb(228,225,223);
   margin : 5px;
 }
 </style>
