@@ -1,14 +1,15 @@
 <template>
   <h1>25 watch effect</h1>
   <!-- watch는 개발자가 코드로 지정한 변수값의 변화를 감시하는 것,
-  콜백함수를 이용하여 부가적인 작업을 추가할 수 있다 -->
+  콜백함수를 이용하여 부가적인 작업을 추가할 수 있다 
+  prev와 cur value 둘 다 알 수가 있다-->
   <p>{{ count_o }}</p>
   <button @click="count_o++">Option API 카운트 증가</button>
   <p>{{ count_c1 }}</p>
   <button @click="count_c1++">Composition API 1st 카운트 증가</button>
   <p>{{ count_c2 }}</p>
   <button @click="count_c2++">Composition API 2nd 카운트 증가</button>
-  <p>상태 : {{ state }}</p>
+  <p>watchEffect : {{ state }}</p>
   <button @click="onStop()">watchEffect 중지</button>
 </template>
 
@@ -21,7 +22,7 @@ export default {
   },
   watch: {
     count_o: function (cur, prev) {
-      console.log(`Options API Watch: ${prev} ==> ${cur}`);
+      console.log(`count_o watch: ${prev} ==> ${cur}`);
     },
   },
 
@@ -33,19 +34,21 @@ export default {
     watch(
       count_c1,
       function (cur, prev) {
-        console.log(`Composition API Watch: ${prev} ==> ${cur}`);
+        console.log(`count_c1 watch : ${prev} => ${cur}`);
       },{ immediate: true }
     );
     watch(
       [count_c1, count_c2],
       function (cur, prev) {
-        console.log(`Composition API Multiple Watch: ${prev} ==> ${cur}`);
-      },{ immediate: true }
+        console.log(`count_c1 and c2 watch : ${prev} => ${cur}`);
+      },{ immediate: true } // immediate: true 초기값부터 변화 파악
     );
+    // watchEffect: 콜백함수에서 참조되는 변수만 감시
     const stop = watchEffect(
       function () {
-        console.log(`Composition API WatchEffect Watch: ${count_c2.value}`);
-      },{ flush: "post" }
+        console.log(`WatchEffect just count_c2 watch : ${count_c2.value}`);
+      },{ flush: "post" } // post: dom이 업데이트 후에 콜백함수를 호출함
+                           // pre: dom이 업데이트 전에 콜백함수를 호출함
     );
     const onStop = function () {
       state.value = "중지";
@@ -56,6 +59,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>
