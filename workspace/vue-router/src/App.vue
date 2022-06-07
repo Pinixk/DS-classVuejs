@@ -1,6 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="nav">
+  <ul>
+    <li>
+      <router-link to="/">Home</router-link>
+    </li>
+    <li>
+      <router-link to="/join">Join</router-link>
+    </li>
+    <li>
+      <router-link to="/login">Login</router-link>
+    </li>
+    <li>
+      <router-link to="/about">About</router-link>
+    </li>
+  </ul>
+</div>
+<router-view></router-view>
 </template>
 
 <script>
@@ -9,12 +24,14 @@ import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    
   }
 }
 </script>
 
 <style>
+ul{list-style: none;}
+li{display: inline-block; width: 150px}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
