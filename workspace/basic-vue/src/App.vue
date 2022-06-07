@@ -47,8 +47,8 @@ import Exercise14 from "./components/Vue14_checkbox_bind.vue";
 import Exercise15 from "./components/Vue15_radio.vue";
 import Exercise16 from "./components/Vue16_radio_bind.vue";
 import Exercise17 from "./components/Vue17_select.vue";
-import Exercise18 from "./components/Vue18_select_bind.vue";
-import Exercise19 from "./components/Vue18_select_bind_V2.vue";
+import Exercise18 from "./components/Vue18_select_bind_V2.vue";
+import Exercise19 from "./components/Vue19_select_bind_V3.vue";
 import Exercise20 from "./components/Vue20_element_join.vue";
 
 // import Footer from "./components/Vue_Footer.vue"

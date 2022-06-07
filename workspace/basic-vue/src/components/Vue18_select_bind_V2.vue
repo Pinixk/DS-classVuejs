@@ -1,6 +1,5 @@
 <template>
   <h1>18 form element select binding</h1>
-  select는 바인딩을 할 때 option의 value에 binding을 한다.
   <select
     name="selItem"
     ref="selItem"
@@ -12,15 +11,13 @@
     <option value="목걸이">necklace</option>
     <option value="귀걸이">earring</option>
     <option value="시계">watch</option>
-    <option value="팔찌">bracelet</option></select><br />
+    <option value="팔찌">bracelet</option></select><br /><br>
   <span>{{ selected }}/{{ selText }}</span><br />
   <span>{{ selected }} / <span id="selText" ref="selText"></span></span>
 </template>
 
 <script>
-// import { onMounted } from '@vue/runtime-core';
 export default {
-  
   // Options API 방식 :: Vue 2.x
   data: () => ({ selected: "반지", selText: "" }),
   methods: {
