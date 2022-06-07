@@ -5,6 +5,12 @@
   <p v-for="item in small_items_o" :key="item.id">{{ item.text }}</p>
   <br />
   <p v-for="item in small_items_c" :key="item.id">{{ item.text }}</p>
+  <br />
+
+  <h2>Big Items</h2>
+  <p v-for="item in big_items_o" :key="item.id">{{ item.text }}</p>
+  <br />
+  <p v-for="item in big_items_c" :key="item.id">{{ item.text }}</p>
 </template>
 
 <script>
@@ -25,7 +31,12 @@ export default {
   },
   computed: {
     small_items_o() {
-      return this.arr.filter((item) => item.id < 3);
+      return this.arr.filter(function (item) {
+        return item.id < 3;
+      });
+    },
+    big_items_o() {
+      return this.arr.filter((item) => item.id >= 3);
     },
   },
 
@@ -43,7 +54,11 @@ export default {
         return items.id < 3;
       });
     });
-    return { small_items_c };
+    const big_items_c = computed(() => {
+      return arr.filter((items) => items.id >= 3);
+    });
+
+    return { small_items_c, big_items_c };
   },
 };
 </script>
