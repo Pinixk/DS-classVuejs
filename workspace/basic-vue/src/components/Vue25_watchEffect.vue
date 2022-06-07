@@ -13,46 +13,48 @@
 </template>
 
 <script>
-import { ref, watch, watchEffect } from '@vue/runtime-core';
+import { ref, watch, watchEffect } from "@vue/runtime-core";
 export default {
-   // Option API
-   data(){
-      return {count_o : 0,}
-   },
-   watch:{
-      count_o: function(cur, prev){
-         console.log(`Options API Watch: ${prev} ==> ${cur}`);
-      },
-   },
+  // Option API
+  data() {
+    return { count_o: 0 };
+  },
+  watch: {
+    count_o: function (cur, prev) {
+      console.log(`Options API Watch: ${prev} ==> ${cur}`);
+    },
+  },
 
-   // Composition API
-   setup(){
-      const count_c1 = ref(0)
-      const count_c2 = ref(0)
-      const state = ref('실행 중')
-      watch(
-         count_c1, function(cur, prev){
-            console.log(`Composition API Watch: ${prev} ==> ${cur}`);
-         },{immediate:true,}
-      )
-      watch(
-         [count_c1,count_c2], function(cur, prev){
-            console.log(`Composition API Multiple Watch: ${prev} ==> ${cur}`);
-         },{immediate:true,}
-      )
-      const stop = watchEffect(
-         function() {
-            console.log(`Composition API WatchEffect Watch: ${count_c2.value}`);
-         },{flush:'post'}
-      )
-      const onStop = function(){
-         state.value = '중지'
-         stop()
-      }
+  // Composition API
+  setup() {
+    const count_c1 = ref(0);
+    const count_c2 = ref(0);
+    const state = ref("실행 중");
+    watch(
+      count_c1,
+      function (cur, prev) {
+        console.log(`Composition API Watch: ${prev} ==> ${cur}`);
+      },{ immediate: true }
+    );
+    watch(
+      [count_c1, count_c2],
+      function (cur, prev) {
+        console.log(`Composition API Multiple Watch: ${prev} ==> ${cur}`);
+      },{ immediate: true }
+    );
+    const stop = watchEffect(
+      function () {
+        console.log(`Composition API WatchEffect Watch: ${count_c2.value}`);
+      },{ flush: "post" }
+    );
+    const onStop = function () {
+      state.value = "중지";
+      stop();
+    };
 
-      return{count_c1, count_c2, state, onStop}
-   }
-}
+    return { count_c1, count_c2, state, onStop };
+  },
+};
 </script>
 
 <style>
