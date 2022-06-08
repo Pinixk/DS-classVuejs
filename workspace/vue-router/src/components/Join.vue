@@ -1,5 +1,5 @@
 <template>
-  <form action="Vue21_memberList.vue" ref="frm">
+  <form  method="get" action="#/login" ref="frm">
     <fieldset>
       <legend>회원가입</legend>
       <!-- id -->
@@ -91,7 +91,7 @@ export default {
   name: "ToLogin",
   data() {
     return {
-      hob: ["농구"],
+      hob: [""],
       hobLi: ["축구", "농구", "배구"],
       gen: "male",
       genLi: ["male", "female"],
@@ -111,7 +111,7 @@ export default {
       const mob2 = this.$refs.mob2;
       const mob3 = this.$refs.mob3;
       const gen = this.$refs.gen;
-      const hob = this.$refs.hob;
+      // const hob = this.$refs.hob;
 
       if (id.value === "") {
         alert("ID를 입력해주세요");
@@ -133,14 +133,14 @@ export default {
         repw.focus();
         return;
       }
-      if (
-        hob[0].checked == false &&
-        hob[1].checked == false &&
-        hob[2].checked == false
-      ) {
-        alert("취미를 입력해주세요");
-        return;
-      }
+      // if (
+      //   hob[0].checked == false &&
+      //   hob[1].checked == false &&
+      //   hob[2].checked == false
+      // ) {
+      //   alert("취미를 입력해주세요");
+      //   return;
+      // }
       if (gen[0].checked === false && gen[1].checked === false) {
         alert("성별을 입력해주세요");
         return;

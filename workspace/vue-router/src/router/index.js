@@ -5,7 +5,7 @@ import Login from "@/components/Login.vue"
 import About from "@/components/About.vue"
 
 const routes = [
-  {path: "/", name: "Home", component: Home},
+  {path: "/", name: "Home", component: Home, alias:"/main"},
   {path: "/join", name: "Join", component: Join},
   {path: "/login", name: "Login", component: Login},
   {path: "/about", name: "About", component: About},
