@@ -1,5 +1,5 @@
 <template>
-  <form method="get" action="#/about" ref="frm">
+  <form method="get" action="/about" ref="frm">
     <fieldset>
       <legend>로그인</legend>
       <!-- id -->
@@ -19,7 +19,7 @@
         <label class="title"></label>
         <button ref="btnJoin" @click.prevent="join">Join</button>
         <button ref="btnCancel" @click.prevent="cancel">Cancel</button>
-        <button ref="btnRegist" @click.prevent="regist" onclick="location.href='#/join'">Regist</button>
+        <button ref="btnRegist" @click.prevent="regist" onclick="location.href='/join'">Regist</button>
       </div>
     </fieldset>
   </form>

@@ -1,5 +1,5 @@
 <template>
-  <form  method="get" action="#/login" ref="frm">
+  <form method="get" action="/login" ref="frm">
     <fieldset>
       <legend>회원가입</legend>
       <!-- id -->
