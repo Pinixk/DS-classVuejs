@@ -1,4 +1,5 @@
-@charset "UTF-8";
+<template>
+  @charset "UTF-8";
 /*!
 * Start Bootstrap - Stylish Portfolio v6.0.5 (https://startbootstrap.com/theme/stylish-portfolio)
 * Copyright 2013-2022 Start Bootstrap
@@ -11570,3 +11571,14 @@ footer.footer .social-link:hover {
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
+</template>
+
+<script>
+export default {
+   name: "bootHome",
+}
+</script>
+
+<style>
+
+</style>
