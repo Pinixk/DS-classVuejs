@@ -1,36 +1,37 @@
 <template>
-<div id="nav">
-  <ul>
-    <li>
-      <router-link to="/">Home</router-link>
-    </li>
-    <li>
-      <router-link to="/join">Join</router-link>
-    </li>
-    <li>
-      <router-link to="/login">Login</router-link>
-    </li>
-    <li>
-      <router-link to="/about">About</router-link>
-    </li>
-  </ul>
-</div>
-<router-view></router-view>
+  <div id="nav">
+    <ul>
+      <li>
+        <router-link to="/">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/join">Join</router-link>
+      </li>
+      <li>
+        <router-link to="/login">Login</router-link>
+      </li>
+      <li>
+        <router-link to="/about">About</router-link>
+      </li>
+      <li>
+        <router-link to="/portfolio">portfolio</router-link>
+      </li>
+    </ul>
+  </div>
+  <router-view />
 </template>
 
-<script>
-
-export default {
-  name: 'App',
-  components: {
-    
-  }
-}
-</script>
 
 <style>
-ul{list-style: none;}
-li{display: inline-block; width: 150px}
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  width: 150px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
