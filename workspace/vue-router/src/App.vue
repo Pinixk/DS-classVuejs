@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+<div>
     <ul>
       <li>
         <router-link to="/">Home</router-link>
@@ -16,14 +16,19 @@
       <li>
         <router-link to="/portfolio">portfolio</router-link>
       </li>
-      <!-- <li>
-        <router-link to="/about">About</router-link>
-      </li> -->
     </ul>
   </div>
   <router-view />
+  
 </template>
 
+<script>
+export default {
+  name: "App",
+  components: {
+  },
+};
+</script>
 
 <style>
 ul {
