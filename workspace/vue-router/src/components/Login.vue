@@ -7,7 +7,7 @@
         <label for="idLog" class="title">ID </label>
         <input type="text" ref="id" id="id" />
       </div>
-     
+
       <!-- password -->
       <div>
         <label for="pwLog" class="title">Password</label>
@@ -26,46 +26,36 @@
 </template>
 
 <script>
+import { ref } from "@vue/reactivity";
 export default {
   name: "ToLogin",
-  data() {
-    return {
-    };
-  },
-  methods: {
-    join() {
-      const frm = this.$refs.frm;
-      const id = this.$refs.id;
-      const pw = this.$refs.pw;
+  setup() {
+    const id = ref(null);
+    const pw = ref(null);
+    const frm = ref(null)
 
-      if (id.value === "") {
-        alert("ID를 확인해주세요");
-        id.focus();
+    function join() {
+      if (id.value.value === "") {
+        alert("ID를 입력해주세요");
+        id.value.focus();
+        return;
+      }
+      if (pw.value.value === "") {
+        alert("비밀번호을 입력해주세요");
+        pw.value.focus();
         return;
       }
      
-      if (pw.value === "") {
-        alert("비밀번호을 입력해주세요");
-        pw.focus();
-        return;
-      }
-      
-      frm.submit();
-    },
-    cancel() {
-      // this.$refs.frm.reset()
-      // document.querySelector("#male").checked = true;
-
-      const frm = this.$refs.frm;
-      const gen = this.$refs.gen;
-      // const hob = this.$refs.hob;
-
-      frm.reset();
-      gen[0].checked = true;
-      // hob[1].checked = true;
+      frm.value.submit();
     }
-  },
-};
+    function cancel() {
+      id.value.value = ""
+      pw.value.value = ""
+    }
+
+    return { frm, id, pw, join, cancel };
+  }
+}
 </script>
 
 <style>

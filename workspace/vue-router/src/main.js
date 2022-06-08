@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import BootstrapVue3 from 'bootstrap-vue-3'
+// import BootstrapVue from 'bootstrap-vue'
 
-
-createApp(App).use(router).use(BootstrapVue3).mount('#app')
+createApp(App).use(router).mount('#app')

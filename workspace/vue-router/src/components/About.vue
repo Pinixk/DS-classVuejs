@@ -1,6 +1,6 @@
 <template>
+
   <h1>{{title}}</h1>
-  <button ref="btnHome" @click.prevent="Home" onclick="location.href='/'">Home</button>
 </template>
 
 <script>

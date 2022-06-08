@@ -1,4 +1,6 @@
 <template>
+
+
   <form method="get" action="/login" ref="frm">
     <fieldset>
       <legend>회원가입</legend>
@@ -36,7 +38,7 @@
             name="hob"
             :id="item"
             :value="item"
-            ref="hob"
+            ref="hobby"
             v-model="hob"
           />
         </label>
@@ -52,7 +54,7 @@
             name="gen"
             :id="item"
             :value="item"
-            ref="gen"
+            ref="gender"
             v-model="gen"
           />
         </label>
@@ -61,19 +63,15 @@
       <!-- mobile -->
       <div>
         <label for="" class="title">Mobile</label>
-        <select name="mobile" v-model="mob">
-          <option
-            :value="item"
-            v-for="(item, idx) in mobLi"
-            :key="idx"
-            ref="mob1"
-          >
+        <select name="mob" ref="mob">
+          <option value="">선택</option>
+          <option :value="item" v-for="(item, idx) in mobLi" :key="idx">
             {{ item }}
           </option>
         </select>
         - <input type="text" ref="mob2" size="1" /> -
         <input type="text" ref="mob3" size="1" />
-        <input type="hidden" name="mobile" ref="mob" />
+        <input type="hidden" name="mobile" ref="mobile" />
       </div>
 
       <!-- button -->
@@ -87,94 +85,93 @@
 </template>
 
 <script>
+import { ref } from "@vue/reactivity";
 export default {
   name: "ToLogin",
-  data() {
-    return {
-      hob: [""],
-      hobLi: ["축구", "농구", "배구"],
-      gen: "male",
-      genLi: ["male", "female"],
-      mob: "010",
-      mobLi: ["010", "011", "016"],
-      sel: "sel",
-      notSel: "",
-    };
-  },
-  methods: {
-    join() {
-      const frm = this.$refs.frm;
-      const id = this.$refs.id;
-      const name = this.$refs.name;
-      const pw = this.$refs.pw;
-      const repw = this.$refs.repw;
-      const mob2 = this.$refs.mob2;
-      const mob3 = this.$refs.mob3;
-      const gen = this.$refs.gen;
-      // const hob = this.$refs.hob;
+  setup() {
+    const hob = ref(['']);
+    const hobLi = ["축구", "농구", "배구"];
+    const gen = ref('');
+    const gender = ref([]);
+    const genLi = ["male", "female"];
+    const mobLi = ["010", "011", "016"];
+    const frm = ref(null);
+    const id = ref(null);
+    const name = ref(null);
+    const pw = ref(null);
+    const repw = ref(null);
+    const mob = ref("");
+    const mob2 = ref(null);
+    const mob3 = ref(null);
+    const hobby = ref("")
 
-      if (id.value === "") {
+    function join() {
+      if (id.value.value === "") {
         alert("ID를 입력해주세요");
-        id.focus();
+        id.value.focus();
         return;
       }
-      if (name.value === "") {
+      if (name.value.value === "") {
         alert("이름을 입력해주세요");
-        name.focus();
+        name.value.focus();
         return;
       }
-      if (pw.value === "") {
+      if (pw.value.value === "") {
         alert("비밀번호을 입력해주세요");
-        pw.focus();
+        pw.value.focus();
         return;
       }
-      if (repw.value !== pw.value) {
+      if (repw.value.value !== pw.value.value) {
         alert("비밀번호와 다릅니다.");
-        repw.focus();
+        repw.value.focus();
         return;
       }
-      // if (
-      //   hob[0].checked == false &&
-      //   hob[1].checked == false &&
-      //   hob[2].checked == false
-      // ) {
-      //   alert("취미를 입력해주세요");
-      //   return;
-      // }
-      if (gen[0].checked === false && gen[1].checked === false) {
+      if (
+        hobby.value[0].checked == false &&
+        hobby.value[1].checked == false &&
+        hobby.value[2].checked == false
+      ) {
+        alert("취미를 입력해주세요");
+        return;
+      }
+      if (gender.value[0].checked === false && gender.value[1].checked === false) {
         alert("성별을 입력해주세요");
         return;
       }
-      if (mob2.value === "") {
-        alert("전화번호을 입력해주세요");
-        mob2.focus();
+      if (mob.value.value == "") {
+        alert("전화번호 앞번호를 입력해주세요");
+        mob.value.focus();
         return;
       }
-      if (mob3.value === "") {
+      if (mob2.value.value === "") {
         alert("전화번호을 입력해주세요");
-        mob3.focus();
+        mob2.value.focus();
+        return;
+      }
+      if (mob3.value.value === "") {
+        alert("전화번호을 입력해주세요");
+        mob3.value.focus();
         return;
       }
 
-      frm.submit();
-    },
-    cancel() {
-      // this.$refs.frm.reset()
-      // document.querySelector("#male").checked = true;
+      frm.value.submit();
+    }
+    function cancel() {
+      frm.value.reset()
 
-      const frm = this.$refs.frm;
-      const gen = this.$refs.gen;
-      // const hob = this.$refs.hob;
+      gender.value[0].checked = true;
+      hobby.value[1].checked = true;
+    }
 
-      frm.reset();
-      gen[0].checked = true;
-      // hob[1].checked = true;
-    },
+    return { hob, hobLi, hobby, gen, genLi, gender, mobLi, id, name, pw, repw, mob, mob2, mob3, join, cancel, frm };
   },
 };
 </script>
 
 <style>
+template {
+  position: relative;
+}
 .title {
   display: inline-block;
   width: 105px;
@@ -182,8 +179,13 @@ export default {
   text-align: left;
 }
 fieldset {
+  position: absolute;
   width: 350px;
+  height: auto;
   text-align: left;
+  border: 1px solid black;
+  margin: 10vw 30vw;
+  padding: 15px;
 }
 button {
   margin: 3px 5px 0px 0px;
