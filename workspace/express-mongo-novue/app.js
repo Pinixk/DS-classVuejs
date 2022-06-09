@@ -9,7 +9,6 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-
 // view engine setup
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
