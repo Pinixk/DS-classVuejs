@@ -1,5 +1,5 @@
 <template>
-  <form method="get" action="/about" ref="frm">
+  <form method="get" action="/list" ref="frm">
     <fieldset>
       <legend>로그인</legend>
       <!-- id -->
@@ -17,9 +17,9 @@
       <!-- button -->
       <div>
         <label class="title"></label>
-        <button ref="btnJoin" @click.prevent="join">Join</button>
-        <button ref="btnCancel" @click.prevent="cancel">Cancel</button>
-        <button ref="btnRegist" @click.prevent="regist" onclick="location.href='/join'">Regist</button>
+        <button class="loginBtn" ref="btnJoin" @click.prevent="enter">Enter</button>
+        <button class="loginBtn" ref="btnCancel" @click.prevent="cancel">Cancel</button>
+        <button class="loginBtn" ref="btnRegist" @click.prevent="regist" onclick="location.href='/join'">Regist</button>
       </div>
     </fieldset>
   </form>
@@ -34,7 +34,7 @@ export default {
     const pw = ref(null);
     const frm = ref(null)
 
-    function join() {
+    function enter() {
       if (id.value.value === "") {
         alert("ID를 입력해주세요");
         id.value.focus();
@@ -53,7 +53,7 @@ export default {
       pw.value.value = ""
     }
 
-    return { frm, id, pw, join, cancel };
+    return { frm, id, pw, enter, cancel };
   }
 }
 </script>
@@ -65,11 +65,8 @@ export default {
   margin: 4px;
   text-align: left;
 }
-fieldset {
-  width: 350px;
-  text-align: left;
-}
-button {
-  margin: 3px 5px 0px 0px;
+.loginBtn {
+  margin: 3px 8px 0px 0px;
+  width: 60px;
 }
 </style>

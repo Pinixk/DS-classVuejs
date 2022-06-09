@@ -6,9 +6,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><router-link to="/" class="nav-link active">Home</router-link></li>
-                          <li class="nav-item"><router-link to="/join" class="nav-link active">Join</router-link></li>
                         <li class="nav-item"><router-link to="/login" class="nav-link active" aria-current="page" >Login</router-link></li>
-                        <li class="nav-item"><router-link to="/about" class="nav-link active" aria-current="page" >About</router-link></li>
+                        <li class="nav-item"><router-link to="/join" class="nav-link active">Join</router-link></li>
+                        <li class="nav-item"><router-link to="/list" class="nav-link active" aria-current="page" >list</router-link></li>
                         <li class="nav-item"><router-link to="/portfolio" class="nav-link active" aria-current="page" >Portfolio</router-link></li>
                     </ul>
                 </div>
@@ -37,6 +37,10 @@ export default {
 </script>
 
 <style>
+template {
+  position: relative;
+}
+
 ul {
   list-style: none;
 }

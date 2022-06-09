@@ -59,7 +59,9 @@ export default {
   position: relative;
   margin : 50px 0;
 }
-
+.header{
+    margin: 50px 0px 30px;
+}
 td,th,tr {
   border: 1px solid black;
   padding: 10px;

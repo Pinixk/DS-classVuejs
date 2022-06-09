@@ -1,10 +1,12 @@
 <template>
-  <h1>{{ title }}</h1>
-  <div class="noti">
-    <b>{{ notiNum }}.</b> <span class="info">That's an error.</span><br />
-    The requested URL <span class="warn">{{ wrongAddress }}</span> was not found
-    on this server.<br />
-    <span class="info">That's all we know.</span>
+  <div id="NotFound">
+    <h1>{{ title }}</h1>
+    <div class="noti">
+      <b>{{ notiNum }}.</b> <span class="info">That's an error.</span><br />
+      The requested URL <span class="warn">{{ wrongAddress }}</span> was not
+      found on this server.<br />
+      <span class="info">That's all we know.</span>
+    </div>
   </div>
 </template>
 
@@ -27,4 +29,7 @@ export default {
 </script>
 
 <style>
+#NotFound{
+  margin : 80px;
+}
 </style>
