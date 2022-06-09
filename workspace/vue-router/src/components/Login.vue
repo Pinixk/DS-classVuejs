@@ -5,13 +5,13 @@
       <!-- id -->
       <div>
         <label for="idLog" class="title">ID </label>
-        <input type="text" ref="id" id="id" />
+        <input type="text" ref="id" id="id" name="id"/>
       </div>
 
       <!-- password -->
       <div>
         <label for="pwLog" class="title">Password</label>
-        <input type="password" ref="pw" id="pw" />
+        <input type="password" ref="pw" id="pw" name="pw"/>
       </div>
 
       <!-- button -->

@@ -23,7 +23,6 @@ export default {
   name: "ToHome",
   setup() {
     const title = ref("Home");
-
     return { title };
   },
 };

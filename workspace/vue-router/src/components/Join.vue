@@ -5,7 +5,7 @@
       <!-- id -->
       <div>
         <label for="id" class="title">ID </label>
-        <input type="text" ref="id" id="id" name="id"/>
+        <input type="text" ref="joinId" id="joinId" name="joinId"/>
       </div>
 
       <!-- name -->
@@ -17,7 +17,7 @@
       <!-- password -->
       <div>
         <label for="pw" class="title">Password</label>
-        <input type="password" ref="pw" id="pw" name="pw"/>
+        <input type="password" ref="joinPw" id="joinPw" name="joinPw"/>
       </div>
 
       <!-- re password -->
@@ -94,9 +94,9 @@ export default {
     const genLi = ["male", "female"];
     const mobLi = ["010", "011", "016"];
     const frm = ref(null);
-    const id = ref(null);
+    const joinId = ref(null);
     const name = ref(null);
-    const pw = ref(null);
+    const joinPw = ref(null);
     const repw = ref(null);
     const mob = ref("");
     const mob2 = ref(null);
@@ -105,9 +105,9 @@ export default {
     const hobby = ref("")
 
     function join() {
-      if (id.value.value === "") {
+      if (joinId.value.value === "") {
         alert("ID를 입력해주세요");
-        id.value.focus();
+        joinId.value.focus();
         return;
       }
       if (name.value.value === "") {
@@ -115,12 +115,12 @@ export default {
         name.value.focus();
         return;
       }
-      if (pw.value.value === "") {
+      if (joinPw.value.value === "") {
         alert("비밀번호을 입력해주세요");
-        pw.value.focus();
+        joinPw.value.focus();
         return;
       }
-      if (repw.value.value !== pw.value.value) {
+      if (repw.value.value !== joinPw.value.value) {
         alert("비밀번호와 다릅니다.");
         repw.value.focus();
         return;
@@ -163,7 +163,7 @@ export default {
       hobby.value[1].checked = true;
     }
 
-    return { hob, hobLi, hobby, gen, genLi, gender, mobLi, id, name, pw, repw, mob, mob2, mob3, mobile, join, cancel, frm };
+    return { hob, hobLi, hobby, gen, genLi, gender, mobLi, joinId, name, joinPw, repw, mob, mob2, mob3, mobile, join, cancel, frm };
   },
 };
 </script>
