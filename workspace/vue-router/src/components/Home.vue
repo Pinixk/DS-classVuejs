@@ -4,11 +4,9 @@
     <div class="container my-5">
       <div class="row justify-content-center">
         <div class="col-lg-6">
-          <h2>동성 스쿠버다이빙</h2><br>
-          <p class="mb-0">
-            Tel. 010-5794-5477
-          </p>
-            <img src="../assets/diving.png" alt="Diving" class="diving">
+          <h2>Welcome DS Dive</h2><br>
+          <p class="mb-0"></p>
+            <img src="../assets/diving.png" alt="Diving" class="diving" onclick="location.href='/login'">
         </div>
       </div>
     </div>

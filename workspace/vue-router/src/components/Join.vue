@@ -1,6 +1,6 @@
 <template>
   <form method="get" action="/login" ref="frm">
-    <fieldset>
+    <fieldset id="joinF">
       <legend>회원가입</legend>
       <!-- id -->
       <div>
@@ -172,22 +172,26 @@ export default {
 Form{
   width:100%; height:100%; display:flex;
 }
-fieldset {
+#joinF {
   width: 350px;
   height: auto;
   text-align: left;
-  border: 1px solid black;
-  margin: 80px auto;
+  /* border: 1px solid black; */
+  margin: 150px auto;
   padding: 15px;
 }
 .joinBtn {
   margin: 3px 8px 0px 0px;
-  width: 57px;
+  width: 60px;
+  background-color:transparent;
+  text-align: center;
 }
 .title {
   display: inline-block;
   width: 105px;
   margin: 4px;
   text-align: left;
+  border: 0;
+  outline: 0;
 }
 </style>

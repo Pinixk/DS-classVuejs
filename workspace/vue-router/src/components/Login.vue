@@ -1,6 +1,6 @@
 <template>
   <form method="get" action="/list" ref="frm">
-    <fieldset>
+    <fieldset id="loginF">
       <legend>로그인</legend>
       <!-- id -->
       <div>
@@ -59,6 +59,18 @@ export default {
 </script>
 
 <style>
+#loginF {
+  width: 350px;
+  height: auto;
+  text-align: left;
+  /* border: 1px solid black; */
+  margin: 200px auto;
+  padding: 15px;
+}
+legend{
+  text-align: center;
+  margin-bottom: 30px;
+}
 .title {
   display: inline-block;
   width: 105px;
@@ -68,5 +80,6 @@ export default {
 .loginBtn {
   margin: 3px 8px 0px 0px;
   width: 60px;
+  background-color:transparent;
 }
 </style>

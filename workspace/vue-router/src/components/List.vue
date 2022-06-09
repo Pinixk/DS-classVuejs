@@ -18,14 +18,14 @@
                         <td>첫번째</td>
                         <td>철수</td>
                         <td>ch_123</td>
-                        <td>010-1241-3325</td>
+                        <td>010-1234-1234</td>
                         <td>ch_123@gmail.com</td>
                     </tr>
                     <tr>
                         <td>두번째</td>
                         <td>짱구</td>
                         <td>zzang9</td>
-                        <td>010-9998-8976</td>
+                        <td>010-0101-0101</td>
                         <td>zzang9@hanmail.com</td>
                     </tr>
                 </tbody>
@@ -34,8 +34,15 @@
                         <td>세번째</td>
                         <td>훈이</td>
                         <td>ugly</td>
-                        <td>010-1547-7651</td>
-                        <td>ugly@naver.com</td>
+                        <td>010-0000-0000</td>
+                        <td>ugly24@naver.com</td>
+                    </tr>
+                    <tr>
+                        <td>네번째</td>
+                        <td>유리</td>
+                        <td>glass</td>
+                        <td>010-xxxx-xxxx</td>
+                        <td>glass_55@naver.com</td>
                     </tr>
                 </tfoot>
             </table>
@@ -51,19 +58,11 @@ export default {
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-}
-.aboutCon {
-  position: relative;
-  margin : 50px 0;
-}
 .header{
-    margin: 50px 0px 30px;
+    margin: 150px 0px 30px;
 }
-td,th,tr {
-  border: 1px solid black;
-  padding: 10px;
+td,th {
+  border-bottom: 1px solid black;
+  padding: 15px;
 }
 </style>

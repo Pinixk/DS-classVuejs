@@ -30,6 +30,7 @@ export default {
 
 <style>
 #NotFound{
-  margin : 80px;
+  margin : 200px;
+  color : gray
 }
 </style>
