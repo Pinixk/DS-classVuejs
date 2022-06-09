@@ -160,7 +160,7 @@ export default {
       frm.value.reset()
 
       gender.value[0].checked = true;
-      hobby.value[1].checked = true;
+      // hobby.value[1].checked = true;
     }
 
     return { hob, hobLi, hobby, gen, genLi, gender, mobLi, joinId, name, joinPw, repw, mob, mob2, mob3, mobile, join, cancel, frm };

@@ -4,13 +4,11 @@
     <div class="container my-5">
       <div class="row justify-content-center">
         <div class="col-lg-6">
-          <h2>6/10</h2><br>
-          <p class="lead">
-            Pass라도 하자!!
-          </p>
+          <h2>동성 스쿠버다이빙</h2><br>
           <p class="mb-0">
-            우리 모두 수료하고 성공적으로 취업합시다!!
+            Tel. 010-5794-5477
           </p>
+            <img src="../assets/diving.png" alt="Diving" class="diving">
         </div>
       </div>
     </div>
@@ -30,4 +28,9 @@ export default {
 
 <style>
 @import "../assets/css/styles.css";
+.diving{
+  object-fit: cover;
+  margin-top: 100px;
+}
+
 </style>
