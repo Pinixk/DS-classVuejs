@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const nunjucks = require('nunjucks');
+const connect = require('./schemas')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -13,6 +15,11 @@ var app = express();
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
+
+nunjucks.configure('views',{
+  express: app, watch: true,
+})
+connect();
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -25,6 +32,7 @@ app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  const error = new Error(`${req.method} ${req.url} 라우터가 없습니다`)
   next(createError(404));
 });
 

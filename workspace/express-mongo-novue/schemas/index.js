@@ -17,3 +17,5 @@ const connect = function(){
 mongoose.connect.on('error', function(error){
    console.log('mongodb connection error', error);
 })
+
+module.exports = connect
