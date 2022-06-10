@@ -3,10 +3,10 @@ const connect = function(){
    if(process.env.NODE_ENV !== 'production'){
       mongoose.set('debug', true)
    }
-   mongoose.connect('mongodb://sensor:1234@localhost:27017/sensor',
-      {dbName:'sensor', useNewUrlParser: true, useCreateIndex: true,},
-      function(err){
-         if(err){
+   mongoose.connect('mongodb://mango:1234@localhost:27017/sensor',
+      {dbName:'sensor', useNewUrlParser: true},
+      function(error){
+         if(error){
             console.log('mongodb connection failed');
          } else {
             console.log('mongodb connection success');
