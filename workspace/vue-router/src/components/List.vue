@@ -5,46 +5,18 @@
             <h1>회원 정보</h1>
         </div>
         <div>
+            <div v-for="(item,idx) in header" :key="idx">{{item}}</div>
             <table>
                 <thead>
-                    <th>순번</th>
-                    <th>이름</th>
-                    <th>ID</th>
-                    <th>전화번호</th>
-                    <th>E-mail</th>
+                    <th v-for="(item,idx) in header" :key="idx">{{item}}</th>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>첫번째</td>
-                        <td>철수</td>
-                        <td>ch_123</td>
-                        <td>010-1234-1234</td>
-                        <td>ch_123@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>두번째</td>
-                        <td>짱구</td>
-                        <td>zzang9</td>
-                        <td>010-0101-0101</td>
-                        <td>zzang9@hanmail.com</td>
+                      
+
                     </tr>
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <td>세번째</td>
-                        <td>훈이</td>
-                        <td>ugly</td>
-                        <td>010-0000-0000</td>
-                        <td>ugly24@naver.com</td>
-                    </tr>
-                    <tr>
-                        <td>네번째</td>
-                        <td>유리</td>
-                        <td>glass</td>
-                        <td>010-xxxx-xxxx</td>
-                        <td>glass_55@naver.com</td>
-                    </tr>
-                </tfoot>
+         
             </table>
         </div>
     </div>
@@ -54,6 +26,19 @@
 <script>
 export default {
   name: "ToAbout",
+  set(){
+    const header = ['순번','이름','ID','전화번호','E-mail'];
+    const menber = [
+        ['1st','2nd','3rd','4th'],
+        ['짱구','철수','훈이','유리'],
+        ['Zzang9','stealWater','ugly2','glassy'],
+        ['010-0000-0000','010-1111-1111','010-0101-1010','010-xxxx-xxxx'],
+        ['Zzang9@gmail.com', 'stealWater@naver.com', 'ugly2@nate.com', 'glassy@hanmail.net'],
+    ];
+
+
+    return {header, menber}
+  }
 };
 </script>
 

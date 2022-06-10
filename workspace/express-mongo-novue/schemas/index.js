@@ -3,6 +3,7 @@ const connect = function(){
    if(process.env.NODE_ENV !== 'production'){
       mongoose.set('debug', true)
    }
+   
    mongoose.connect('mongodb://mango:1234@localhost:27017/sensor',
       {dbName:'sensor', useNewUrlParser: true},
       function(error){
