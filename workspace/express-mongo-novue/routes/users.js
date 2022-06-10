@@ -32,7 +32,7 @@ router.route('/')
 router.get('/:id/comments', async (req, res, next) => {
   try {
     const comments = await Comment.find({ commenter: req.params.id })
-      .populate('commenter');
+      .populate('commenter'); // populate 하나의 document가 다른 document의 objectId로 사용될 때
     console.log(comments);
     res.json(comments);
   } catch (err) {

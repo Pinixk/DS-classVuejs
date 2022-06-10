@@ -40,7 +40,7 @@ async function getUser() {
 // 댓글 로딩
 async function getComment(id) {
   try {
-    const res = await axios.get(`/users/${id}/comments`);
+    const res = await axios.get(`/users/${id}/comments`); // axios 비정기적인 정보를 담아옴
     const comments = res.data;
     const tbody = document.querySelector('#comment-list tbody');
     tbody.innerHTML = '';
@@ -56,6 +56,7 @@ async function getComment(id) {
       td = document.createElement('td');
       td.textContent = comment.comment;
       row.appendChild(td);
+      // 버튼 정의
       const edit = document.createElement('button');
       edit.textContent = '수정';
       edit.addEventListener('click', async () => { // 수정 클릭 시
