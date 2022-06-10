@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const nunjucks = require('nunjucks');
 const connect = require('./schemas')
 
 var indexRouter = require('./routes/index');
@@ -16,9 +15,6 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
 
-nunjucks.configure('views',{
-  express: app, watch: true,
-})
 connect();
 
 app.use(logger('dev'));
