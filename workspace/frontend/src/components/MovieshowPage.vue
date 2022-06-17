@@ -23,7 +23,10 @@
 <script>
 export default {
   setup() {
-    const movie = {};
+    let movie = {};
+    const $http = [];
+    const $route = [];
+
     var id = $route.params.id;
     $http.get("/api/movies/" + id).then((response) => {
       movie = response.data[0];

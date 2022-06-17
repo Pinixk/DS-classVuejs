@@ -22,7 +22,9 @@
 <script>
 export default {
    setup(){
-      const movies = [];
+      let movies = [];
+      const $http = [];
+
       $http.get('api/movies').then((response)=>{
          movies = response.data
       }).catch((err)=>{
