@@ -21,8 +21,8 @@
 
 <script>
 export default {
-   movie : [],
    setup(){
+      const movies = [];
       $http.get('api/movies').then((response)=>{
          movies = response.data
       }).catch((err)=>{

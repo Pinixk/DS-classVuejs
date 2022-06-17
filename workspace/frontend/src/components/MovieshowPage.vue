@@ -17,9 +17,7 @@
       <h2>줄거리</h2>
       <p v-html="movie.synopsis" class="synopsis"></p>
     </section>
-    <router-link :to="{ name: 'index', params: { id: movie.id } }" class="link"
-      >돌아가기</router-link
-    >
+    <router-link :to="{ name: 'index', params: { id: movie.id } }" class="link">돌아가기</router-link>
   </div>
 </template>
 <script>
@@ -29,9 +27,9 @@ export default {
     var id = $route.params.id;
     $http.get("/api/movies/" + id).then((response) => {
       movie = response.data[0];
-    }).catch((err) => {
-      console.log(err);
-    })
+      }).catch((err) => {
+        console.log(err);
+      });
     return { movie };
   },
 };
