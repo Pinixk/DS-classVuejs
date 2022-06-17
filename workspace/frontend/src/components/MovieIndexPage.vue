@@ -27,7 +27,7 @@ export default {
          movies = response.data
       }).catch((err)=>{
          console.log(err);
-      });
+      })
    return {movies}
    },
 }
