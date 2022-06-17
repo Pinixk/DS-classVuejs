@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Index from '@/components/MoiveIndexPage';
-import Index from '@/components/MoiveShowPage';
+import Index from '@/components/MovieIndexPage';
+import Show from '@/components/MovieShowPage';
 
 Vue.useAttrs(Router);
 
