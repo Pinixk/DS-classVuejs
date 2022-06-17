@@ -23,9 +23,9 @@
 <script>
 export default {
   setup() {
-    let movie = {};
-    const $http = [];
-    const $route = [];
+    let movie = [];
+    var $http = '';
+    var $route = '';
 
     var id = $route.params.id;
     $http.get("/api/movies/" + id).then((response) => {
