@@ -21,7 +21,7 @@
 
 <script>
 export default {
-   movies : [],
+   movie : [],
    setup(){
       $http.get('api/movies').then((response)=>{
          movies = response.data
