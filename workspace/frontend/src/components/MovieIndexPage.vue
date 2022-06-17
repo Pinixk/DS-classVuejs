@@ -23,7 +23,7 @@
 export default {
    setup(){
       let movies = [];
-      var $http = '';
+      const $http = null;
 
       $http.get('api/movies').then((response)=>{
          movies = response.data
