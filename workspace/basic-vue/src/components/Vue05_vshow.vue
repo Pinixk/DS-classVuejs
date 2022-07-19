@@ -18,7 +18,7 @@ const vn = {
     }, 1000);
   }
 }
-  export default vn
+  export default {vn} // 사용시 중괄호 지워야 함
 </script>
 
 <style></style>
