@@ -6,10 +6,10 @@
 
   <div>당신의 학점은</div>
   <input type="text" size="15" v-model="score">
-  <div v-if="score >= 90">A</div>
-  <div v-else-if="score >= 80">B</div>
-  <div v-else-if="score >= 70">C</div>
-  <div v-else>F</div>
+  <div v-if="score >= 90"><h1>A</h1></div>
+  <div v-else-if="score >= 80"><h1>B</h1></div>
+  <div v-else-if="score >= 70"><h1>C</h1></div>
+  <div v-else><h1>F</h1></div>
 </template>
 
 <script>
